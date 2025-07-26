@@ -7,7 +7,9 @@
     "assert.h": "c",
     "unistd.h": "c",
     "stdlib.h": "c",
-    "string.h": "c"
+    "string.h": "c",
+    "typeinfo": "c",
+    "birchutils.h": "c"
   },
   "C_Cpp.errorSquiggles": "disabled"
 }

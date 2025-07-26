@@ -4,6 +4,35 @@
 
 // --- UTILITY FUNCTIONS ---
 
+#define MAX_VARS 100
+
+typedef struct {
+    char name[32];
+    int value;
+} int_var;
+
+int_var int_vars[MAX_VARS];
+int int_var_count = 0;
+
+void add_int_var(const char* name, int value) {
+    if (int_var_count >= MAX_VARS) {
+        printf("Too many variables!\n");
+        return;
+    }
+    strncpy(int_vars[int_var_count].name, name, 31);
+    int_vars[int_var_count].name[31] = '\0';
+    int_vars[int_var_count].value = value;
+    int_var_count++;
+}
+
+int* find_int_var(const char* name) {
+    for (int i = 0; i < int_var_count; i++) {
+        if (strcmp(int_vars[i].name, name) == 0)
+            return &int_vars[i].value;
+    }
+    return NULL;
+}
+
 // It will take a destination, a source, and a size
 void copy(int8 *dst, int8 *src, int16 size) {
     int8 *dptr = dst;
@@ -95,12 +124,34 @@ void mainloop(bool *cpntr) {
     if (cmd) {
         if (!strcmp($c cmd, "exit")) {
             *cpntr = false;
-        } else if (!strcmp($c cmd, "x")) {
-            printf("42\n");
-        } else if (!strcmp($c cmd, "Dev")) {
-            printf("Antonio\n");
+        } else if (strncmp($c cmd, "int ", 4) == 0) {
+            char varname[32];
+            int value;
+            if (sscanf($c cmd, "int %31s = %d;", varname, &value) == 2 ||
+                sscanf($c cmd, "int %31s = %d", varname, &value) == 2) {
+                size_t len = strlen(varname);
+                if (varname[len-1] == ';') varname[len-1] = 0;
+                add_int_var(varname, value);
+                printf("Variable '%s' set to %d\n", varname, value);
+            } else {
+                printf("Syntax error! Usage: int nome = valore;\n");
+            }
+        } else if (strncmp($c cmd, "print ", 6) == 0) {
+            char varname[32];
+            if (sscanf($c cmd, "print %31s", varname) == 1) {
+                size_t len = strlen(varname);
+                if (varname[len-1] == ';') varname[len-1] = 0;
+                int* value = find_int_var(varname);
+                if (value) {
+                    printf("%s = %d\n", varname, *value);
+                } else {
+                    printf("Variable '%s' not found\n", varname);
+                }
+            } else {
+                printf("Syntax error! Usage: print name;\n");
+            }
         } else {
-            printf("Unknown variable or command.\n");
+            printf("Unknown command!\n");
         }
         free(cmd);
     }

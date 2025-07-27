@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./banner.png" alt="Ciphron Banner" width="520">
+  <img src="./banner.png" alt="Ciphron Banner">
 </p>
 
 # Ciphron

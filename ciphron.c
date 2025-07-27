@@ -94,26 +94,6 @@ int16 length(int8 *str) {
     return n;
 }
 
-// --- VARIABLE CONSTRUCTORS ---
-
-// Constructor function for making a variable
-variable *mkvar(Type type, Identifier *ident, void* value) {
-    variable *p;
-    int16 size;
-    if (!type || !ident || !value)
-        // Return NULL if any of the parameters are invalid
-        return (variable *)0; 
-    size = sizeof(struct s_variable);
-    p = (variable *)malloc($i size);
-    if (!p) 
-        // If memory allocation fails, return NULL
-        return (variable *)0;
-    zero($1 p, size);
-    p->datatype = type;
-    p->name = ident;
-    p->value = value;
-    return p;
-}
 
 // --- INPUT/OUTPUT FUNCTIONS ---
 

@@ -1,0 +1,9 @@
+# Object files
+*.o
+
+# Executable
+ciphron
+
+# VSCode settings 
+.vscode/
+

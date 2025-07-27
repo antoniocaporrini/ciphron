@@ -42,7 +42,6 @@ struct s_variable {
 }; typedef struct s_variable variable; 
 
 // --- MACROS ---
-
 #define $1 (int8 *)
 #define $2 (int16)
 #define $4 (int32)

@@ -14,7 +14,6 @@ typedef int8 Identifier;
 #define $c (char *)
 #define $i (int)
 
-// It accepts an expression
 #define dtype(e) _Generic((e), \
     int32: "int32", \
     char: "char", \
@@ -24,8 +23,7 @@ typedef int8 Identifier;
     int8*: "string" \
 ) 
 
-// Type type(variable*);
-#define showtype(e) printf("%s :: (%s)\n", # e, dtype((e)));
+/* #define showtype(e) printf("%s :: (%s)\n", # e, dtype((e))); */
 
 
 

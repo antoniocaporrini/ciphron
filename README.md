@@ -6,13 +6,9 @@
 
 **Introspection for your code.**
 
----
-
 ## 🚀 What is Ciphron?
 
-Ciphron is a tiny C-style REPL (Read-Eval-Print Loop) that lets you declare variables, print values, and introspect types right from your terminal. Inspired by C, Haskell, and retro computing, it’s a playground for anyone curious about interpreters, parsing, and dynamic code.
-
----
+Ciphron is a tiny C-style REPL (Read-Eval-Print Loop) that lets you declare variables, print values, and introspect types right from your terminal. Inspired by C syntax, it’s a playground for anyone curious about interpreters.
 
 ## ✨ Features
 
@@ -21,8 +17,6 @@ Ciphron is a tiny C-style REPL (Read-Eval-Print Loop) that lets you declare vari
 - **Type introspection**: use `:t varname` to check a variable’s type (just like Haskell)
 - **Error messages** for unknown variables or invalid syntax
 - **Minimal, hackable codebase**—easy to read and extend
-
----
 
 ## 🛠️ Installation
 
@@ -33,7 +27,8 @@ Ciphron is a tiny C-style REPL (Read-Eval-Print Loop) that lets you declare vari
 **Build with:**
 
 ```bash
-git clone https://github.com/yourusername/ciphron.git
+git clone https://github.com/antoniocaporrini/ciphron.git
 cd ciphron
 make
+./ciphron
 ```

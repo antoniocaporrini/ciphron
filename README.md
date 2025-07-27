@@ -6,6 +6,9 @@
 
 **Introspection for your code.**
 
+> Ciphron is a play on “C interpreter” and “phronesis” (ancient Greek for practical wisdom).  
+> The logo, which recalls Sigmund Freud, hints at the idea of interpreting—just as Freud interpreted dreams, Ciphron interprets your C-style commands in real time.
+
 ## 🚀 What is Ciphron?
 
 Ciphron is a tiny C-style REPL (Read-Eval-Print Loop) that lets you declare variables, print values, and introspect types right from your terminal. Inspired by C syntax, it’s a playground for anyone curious about interpreters.

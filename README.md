@@ -62,10 +62,13 @@ Start Ciphron from your terminal:
 
 You’ll see the Ciphron banner and the prompt:
 
+```bash
 ciphron>
+```
 
 Here are some example commands you can try:
 
+```bash
 ciphron> int x = 5;
 Variable 'x' set to 5
 
@@ -88,6 +91,7 @@ ciphron> print y;
 Variable 'y' not found
 
 ciphron> exit
+```
 
 ## 🗺️ Roadmap
 

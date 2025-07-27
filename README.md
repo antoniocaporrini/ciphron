@@ -110,4 +110,3 @@ ciphron> exit
 Ciphron is currently a minimal REPL: It is not a full interpreter or scripting engine (yet!)—but its modular codebase is designed for easy extension toward more advanced language features, or even basic compilation in the future.
 
 <img src="https://img.shields.io/badge/Built%20with-Love%20%26%20Freud%20in%20mind-blueviolet" alt="Built with Love & Freud in mind ❤️">
-```

@@ -11,7 +11,9 @@
 
 ## 🎬 Demo
 
-[▶️ Watch the Ciphron demo video](./media/demo.mp4)
+<p align="center">
+  <img src="./media/demo.gif" alt="Ciphron demo">
+</p>
 
 ## 🔎 What is Ciphron?
 

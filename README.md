@@ -52,6 +52,43 @@ gcc ciphron.c common.c -o ciphron
 ./ciphron
 ```
 
+## ▶️ Usage
+
+Start Ciphron from your terminal:
+
+```bash
+./ciphron
+```
+
+You’ll see the Ciphron banner and the prompt:
+
+ciphron>
+
+Here are some example commands you can try:
+
+ciphron> int x = 5;
+Variable 'x' set to 5
+
+ciphron> string dev = "Antonio";
+Variable 'dev' set to "Antonio"
+
+ciphron> print x;
+x = 5
+
+ciphron> print dev;
+dev = "Antonio"
+
+ciphron> :t x
+x :: int
+
+ciphron> :t dev
+dev :: string
+
+ciphron> print y;
+Variable 'y' not found
+
+ciphron> exit
+
 ## 🗺️ Roadmap
 
 - [x] Declare integer and string variables dynamically
@@ -69,3 +106,4 @@ gcc ciphron.c common.c -o ciphron
 Ciphron is currently a minimal REPL: It is not a full interpreter or scripting engine (yet!)—but its modular codebase is designed for easy extension toward more advanced language features, or even basic compilation in the future.
 
 <img src="https://img.shields.io/badge/Built%20with-Love%20%26%20Freud%20in%20mind-blueviolet" alt="Built with Love & Freud in mind ❤️">
+```
